@@ -5,7 +5,6 @@ import { nanoid } from "nanoid";
 const contactsPath = path.resolve("db/contacts.json");
 
 export const listContactsService = async () => {
-  console.log(contactsPath);
   const data = await fs.readFile(contactsPath);
   return JSON.parse(data);
 };
